@@ -7,29 +7,6 @@
   <display-name>Spring MVC Qcon com OSGI</display-name>
   <description>Exemplo do Spring MVC com Apache Karaf</description>
 
-<!--   <jsp-config> -->
-<!--     <taglib> -->
-<!--       <taglib-uri>http://java.sun.com/jstl/core</taglib-uri> -->
-<!--       <taglib-location>/WEB-INF/tld/c.tld</taglib-location> -->
-<!--     </taglib> -->
-<!--     <taglib> -->
-<!--       <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri> -->
-<!--       <taglib-location>/WEB-INF/tld/fmt.tld</taglib-location> -->
-<!--     </taglib> -->
-<!--     <taglib> -->
-<!--       <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri> -->
-<!--       <taglib-location>/WEB-INF/tld/fmt.tld</taglib-location> -->
-<!--     </taglib> -->
-<!--     <taglib> -->
-<!--       <taglib-uri>http://java.sun.com/jsp/jstl/functions</taglib-uri> -->
-<!--       <taglib-location>/WEB-INF/tld/fn.tld</taglib-location> -->
-<!--     </taglib> -->
-<!--     <taglib> -->
-<!--       <taglib-uri>http://java.sun.com/jsp/jstl/xml</taglib-uri> -->
-<!--       <taglib-location>/WEB-INF/tld/x.tld</taglib-location> -->
-<!--     </taglib> -->
-<!--   </jsp-config>   -->
-  
   <servlet>
     <servlet-name>spring-mvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

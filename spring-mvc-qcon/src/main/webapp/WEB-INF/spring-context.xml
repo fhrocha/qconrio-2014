@@ -14,13 +14,11 @@
            http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-  <osgi:reference id="configurationAdmin"  interface="org.osgi.service.cm.ConfigurationAdmin"/>
   <osgi:reference id="tarefaService" interface="br.com.caelum.qcon.service.TarefaService"/>
 
   <mvc:annotation-driven />
-  
   <ctx:component-scan base-package="br.com.caelum.qcon"/>
-  
+
   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     <property name="prefix" value="/WEB-INF/views/" />
