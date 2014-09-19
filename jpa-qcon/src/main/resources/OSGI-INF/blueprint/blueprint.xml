@@ -7,13 +7,11 @@
         http://aries.apache.org/xmlns/jpa/v1.0.0 https://aries.apache.org/schemas/jpa/jpa.xsd
         http://aries.apache.org/xmlns/transactions/v1.0.0 https://aries.apache.org/schemas/transaction/transactionv10.xsd">
     
-    <bean id="tarefaService"
-        class="br.com.caelum.qcon.impl.TarefaServiceImpl">
+    <bean id="tarefaService" class="br.com.caelum.qcon.impl.TarefaServiceImpl">
         <tx:transaction method="*" value="Required"/>
         <jpa:context property="entityManager" unitname="tarefas-unit"/>
     </bean>
     
-    <service interface="br.com.caelum.qcon.service.TarefaService"
-        ref="tarefaService"/>
+    <service ref="tarefaService" interface="br.com.caelum.qcon.service.TarefaService" />
     
 </blueprint>
