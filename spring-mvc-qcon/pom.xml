@@ -107,7 +107,8 @@
 		        org.springframework.web.bind.annotation,
 		        org.springframework.web.servlet,
 		        org.springframework.web.servlet.view,
-		        br.com.caelum.qcon.jpa-acon;version="1.1.0"
+		        br.com.caelum.qcon.modelo;version="1.1.0",
+		        br.com.caelum.qcon.service;version="1.1.0",
 	            *
             </Import-Package>
 	  		 <Bundle-ClassPath>

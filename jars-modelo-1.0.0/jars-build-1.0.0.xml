@@ -19,7 +19,7 @@
 
 
 	<target name="gerar-modelo.1.0.0" depends="compilar">
-		<jar jarfile="${jars}/modelo-${versao}.jar" >
+		<jar jarfile="${jars}/modelo-${versao}.jar">
 			<fileset dir="${classes}" >
 				<include name="br/com/caelum/modelo/*"/>
 			</fileset>

@@ -26,5 +26,6 @@ public class TarefaServiceImpl implements TarefaService {
 
 	public void geraTarefa(Tarefa tarefa) {
 		this.entityManager.persist(tarefa);
+		System.out.println("Criando nova tarefa " + tarefa);
 	}
 }

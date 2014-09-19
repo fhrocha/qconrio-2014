@@ -15,8 +15,6 @@ public class TarefasController {
 
 	@RequestMapping({ "adicionaTarefa" }) 
 	public String adiciona(Tarefa tarefa) {
-		System.out.println(this.tarefaService);
-		System.out.println(tarefa);
 		this.tarefaService.geraTarefa(tarefa);
 		return "tarefa/adicionada";
 	}

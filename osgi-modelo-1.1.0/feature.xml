@@ -6,10 +6,10 @@
   <feature name="modelo-qcon" version="1.1.0" description="Projeto com 5 bundles Modelo 1.0 e 1.1, Servicos e Activator">
    
     <bundle>file:/Users/nico/qconrio-2014/osgi-modelo-1.1.0/lib/modelo-1.0.0.jar</bundle>
-    <bundle>file:/Users/nico/qconrio-2014/jars/financeiro-1.0.0.jar</bundle>
-    <bundle>file:/Users/nico/qconrio-2014/jars/modelo-1.1.0.jar</bundle>
-    <bundle>file:/Users/nico/qconrio-2014/jars/comercial-1.1.0.jar</bundle>
-    <bundle start="false">file:/Users/nico/qconrio-2014/jars/activator-1.1.0.jar</bundle>
+    <bundle>file:/Users/nico/qconrio-2014/osgi-modelo-1.1.0/jars/financeiro-1.0.0.jar</bundle>
+    <bundle>file:/Users/nico/qconrio-2014/osgi-modelo-1.1.0/jars/modelo-1.1.0.jar</bundle>
+    <bundle>file:/Users/nico/qconrio-2014/osgi-modelo-1.1.0/jars/comercial-1.1.0.jar</bundle>
+    <bundle start="false">file:/Users/nico/qconrio-2014/osgi-modelo-1.1.0/jars/activator-1.1.0.jar</bundle>
  
  </feature>
  
