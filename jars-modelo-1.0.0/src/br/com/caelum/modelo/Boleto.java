@@ -4,6 +4,7 @@ public class Boleto implements MeioDePagamento {
 	private double valor;
 
 	public Boleto(double valor) {
+		
 		System.out.println("Criando Boleto " + Versao.NUMERO);
 		System.out.println();
 
