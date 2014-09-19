@@ -1,0 +1,43 @@
+<project name="jars-modelo-1.1.0" default="package" basedir=".">
+
+	<property name="classes" value="classes" />
+	<property name="jars" value="jars" />
+	<property name="versao" value="1.1.0" />
+
+	<target name="package" depends="limpar,gerar-comercial.1.1.0" />
+
+	<target name="limpar">
+		<delete dir="${classes}" />
+		<delete dir="${jars}" />
+	</target>
+
+	<target name="compilar">
+		<mkdir dir="${classes}" />
+		<mkdir dir="${jars}" />
+		<javac srcdir="src" destdir="${classes}" includeantruntime="false" />
+	</target>
+
+	<target name="gerar-modelo.1.1.0" depends="compilar">
+		<jar jarfile="${jars}/modelo-${versao}.jar" >
+			<fileset dir="${classes}" >
+				<include name="br/com/caelum/modelo/*"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="gerar-financeiro.1.0.0" depends="gerar-modelo.1.1.0">
+		<jar jarfile="${jars}/financeiro-1.0.0.jar">
+			<fileset dir="${classes}" >
+				<include name="br/com/caelum/financeiro/*"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="gerar-comercial.1.1.0" depends="gerar-financeiro.1.0.0">
+		<jar jarfile="${jars}/comercial-${versao}.jar">
+			<fileset dir="${classes}" >
+				<include name="br/com/caelum/comercial/*"/>
+			</fileset>
+		</jar>
+	</target>
+</project>
