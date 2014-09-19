@@ -10,8 +10,7 @@ import br.com.caelum.modelo.ProcessadorDeCartaoDeCredito;
 
 public class ServicoFinanceiro {
 
-	public void verificaFaturaComCartao(List<ParcelaCartao> parcelas,
-			Fatura fatura) {
+	public void verificaFaturaComCartao(List<ParcelaCartao> parcelas, Fatura fatura) {
 		new ProcessadorDeCartaoDeCredito().processa(parcelas, fatura);
 	}
 
