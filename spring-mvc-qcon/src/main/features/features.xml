@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="spring-mvc-qcon-war-bundle">
+
+  <feature name="spring-mvc-qcon-war" version="1.1.0">
+    
+    <feature>spring-dm-web</feature>
+    <feature>pax-war</feature>
+    
+    <bundle>mvn:br.com.caelum.qcon/spring-mvc-qcon/1.1.0/war</bundle>
+
+  </feature>
+
+</features>
