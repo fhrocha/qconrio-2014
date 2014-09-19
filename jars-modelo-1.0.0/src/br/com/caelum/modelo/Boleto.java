@@ -1,6 +1,7 @@
 package br.com.caelum.modelo;
 
 public class Boleto implements MeioDePagamento {
+	
 	private double valor;
 
 	public Boleto(double valor) {
