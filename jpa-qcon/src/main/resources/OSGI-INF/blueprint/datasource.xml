@@ -9,7 +9,7 @@
     </service>
     
     <bean id="mysqlDataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
-    <property name="url" value="jdbc:mysql://localhost/fj21"/>
+    	<property name="url" value="jdbc:mysql://localhost/fj21"/>
         <property name="user" value="root"/>
         <property name="password" value=""/>
     </bean>
