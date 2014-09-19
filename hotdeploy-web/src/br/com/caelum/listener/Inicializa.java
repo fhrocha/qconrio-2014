@@ -7,11 +7,11 @@ public class Inicializa implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent event) {
 
-    	System.out.println("Inicializa o contexto...");   
+    	System.out.println("Inicializa o contexto... Hot");   
     	
     	carregaMuitasClasses(); 
 
-    	System.getProperties().put(new Usuario(), "alguma configuração");
+    	System.getProperties().put(new Usuario(), "outra configuração");
 		
 		System.out.println("Fim da inicializaco...");
     }
