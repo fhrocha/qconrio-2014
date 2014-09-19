@@ -10,7 +10,7 @@ __MACOSX
 /Servers
 
 /build/
-/bin/
+bin/
 target/
 classes
 classes
