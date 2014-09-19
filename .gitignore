@@ -9,7 +9,9 @@ __MACOSX
 /build/
 /bin/
 target/
-
+/classes
+classes
+/jars
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
