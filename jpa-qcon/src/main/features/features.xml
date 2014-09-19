@@ -8,7 +8,7 @@
     <feature version="2.2.2">openjpa</feature>
     <feature>transaction</feature>
     
-    <!--  wrap e instala driver para ser bundle-->
+    <!--  wrap e instalar driver para ser bundle-->
 	<bundle>wrap:mvn:mysql/mysql-connector-java/5.1.32</bundle>
     
     <!-- instalar bundle  -->
