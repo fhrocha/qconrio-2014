@@ -7,12 +7,14 @@ __MACOSX
 .classpath
 .metadata
 
+/Servers
+
 /build/
 /bin/
 target/
-/classes
 classes
-/jars
+classes
+jars
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
