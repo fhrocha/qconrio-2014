@@ -11,19 +11,22 @@ public class Inicializa implements ServletContextListener {
     	
 		System.getProperties().put(new Usuario(), "alguma configuração");
     	 
+		carregaMuitasClasses(); 
 		
-		//usando ThreadLocal
-		//new ThreadLocal<Usuario>().set(new Usuario());
-		
-    	// usando JDBC    
-		//Class.forName("com.mysql.jdbc.Driver");
-		//DriverManager.getConnection("jdbc:mysql://localhost/bla");
-
-    	carregaMuitasClasses();
-    	
-    	System.out.println("Fim da inicializaco ...");
+		System.out.println("Fim da inicializaco...");
     }
 
+    public void contextDestroyed(ServletContextEvent event) {
+    }
+    
+   
+    //usando ThreadLocal
+    //new ThreadLocal<Usuario>().set(new Usuario());
+    
+    // usando JDBC    
+    //Class.forName("com.mysql.jdbc.Driver");
+    //DriverManager.getConnection("jdbc:mysql://localhost/bla");
+    
 	private void carregaMuitasClasses() {
 		ClassLoader webappclassloader = Inicializa.class.getClassLoader();
     	try {
@@ -33,14 +36,5 @@ public class Inicializa implements ServletContextListener {
     	} catch (ClassNotFoundException e) { }
 	}
 
-    public void contextDestroyed(ServletContextEvent arg0) {
-//    	DEVEMOS DESREGISTRAR 
-//    	
-//    	try {
-//			DriverManager.deregisterDriver(DriverManager.getDrivers().nextElement());
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-    }
 	
 }
