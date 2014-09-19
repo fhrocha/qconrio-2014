@@ -5,6 +5,7 @@ __MACOSX
 .project
 .settings
 .classpath
+.metadata
 
 /build/
 /bin/
