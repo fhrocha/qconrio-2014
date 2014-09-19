@@ -4,20 +4,20 @@
 	<property name="jars" value="jars" />
 	<property name="versao" value="1.1.0" />
 
-	<target name="package" depends="limpar,gerar-comercial.1.1.0" />
+	<target name="package" depends="6-gerar-programa" />
 
-	<target name="limpar">
+	<target name="1-limpar">
 		<delete dir="${classes}" />
 		<delete dir="${jars}" />
 	</target>
 
-	<target name="compilar">
+	<target name="2-compilar" depends="1-limpar">
 		<mkdir dir="${classes}" />
 		<mkdir dir="${jars}" />
-		<javac srcdir="src" destdir="${classes}" includeantruntime="false" />
+		<javac srcdir="src" destdir="${classes}" includeantruntime="false" classpath="lib/felix.jar"/>
 	</target>
 
-	<target name="gerar-modelo.1.1.0" depends="compilar">
+	<target name="3-gerar-modelo-1.1.0" depends="2-compilar">
 		<jar jarfile="${jars}/modelo-${versao}.jar" manifest="manifest-files/MANIFEST-MODELO" >
 			<fileset dir="${classes}" >
 				<include name="br/com/caelum/modelo/*"/>
@@ -25,7 +25,7 @@
 		</jar>
 	</target>
 	
-	<target name="gerar-financeiro.1.0.0" depends="gerar-modelo.1.1.0">
+	<target name="4-gerar-financeiro.1.0.0" depends="3-gerar-modelo-1.1.0">
 		<jar jarfile="${jars}/financeiro-1.0.0.jar" manifest="manifest-files/MANIFEST-FINANCEIRO" >
 			<fileset dir="${classes}" >
 				<include name="br/com/caelum/financeiro/*"/>
@@ -33,11 +33,24 @@
 		</jar>
 	</target>
 	
-	<target name="gerar-comercial.1.1.0" depends="gerar-financeiro.1.0.0">
+	<target name="5-gerar-comercial-1.1.0" depends="4-gerar-financeiro.1.0.0">
 		<jar jarfile="${jars}/comercial-${versao}.jar" manifest="manifest-files/MANIFEST-COMERCIAL">
 			<fileset dir="${classes}" >
 				<include name="br/com/caelum/comercial/*"/>
 			</fileset>
 		</jar>
 	</target>
+	
+	<target name="6-gerar-programa" depends="5-gerar-comercial-1.1.0">
+		<jar jarfile="${jars}/activator-${versao}.jar" manifest="manifest-files/MANIFEST-ACTIVATOR">
+			<fileset dir="${classes}" >
+				<include name="br/com/caelum/programa/*"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="7-copiar-feature" depends="6-gerar-programa">
+		<copy file="feature.xml" tofile="/Users/nico/apache-karaf-3.0.1/deploy/feature.xml"/>
+	</target>
+
 </project>

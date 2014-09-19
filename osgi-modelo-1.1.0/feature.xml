@@ -1,0 +1,16 @@
+<features name="--- OSGI MODELO 1.1.0 ---"
+          xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.0.0 http://karaf.apache.org/xmlns/features/v1.0.0">
+ 
+  <feature name="modelo-qcon" version="1.1.0" description="Projeto com 5 bundles Modelo 1.0 e 1.1, Servicos e Activator">
+   
+    <bundle>file:/Users/nico/qconrio-2014/lib/modelo-1.0.0.jar</bundle>
+    <bundle>file:/Users/nico/qconrio-2014/jars/financeiro-1.0.0.jar</bundle>
+    <bundle>file:/Users/nico/qconrio-2014/jars/modelo-1.1.0.jar</bundle>
+    <bundle>file:/Users/nico/qconrio-2014/jars/comercial-1.1.0.jar</bundle>
+    <bundle start="false">file:/Users/nico/qconrio-2014/jars/activator-1.1.0.jar</bundle>
+ 
+ </feature>
+ 
+</features>
