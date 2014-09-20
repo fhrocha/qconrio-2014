@@ -16,7 +16,7 @@ import br.com.caelum.modelo.ParcelaCartao;
 public class ServicosActivator implements BundleActivator {
 	
 	public void start(BundleContext paramBundleContext) throws Exception {
-		System.out.println("Activando programa ... ");
+		System.out.println("Iniciando programa ... ");
 		rodaPrograma();
 	}
 
